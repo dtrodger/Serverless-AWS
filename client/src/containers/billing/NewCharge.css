@@ -1,0 +1,13 @@
+@media all and (min-width: 480px) {
+  .NewCharge form {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+}
+.NewCharge .LoaderButton:last-child {
+  margin-top: 15px;
+}
+.NewCharge h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}

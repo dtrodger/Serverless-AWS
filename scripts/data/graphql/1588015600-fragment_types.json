@@ -1,0 +1,69 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "INTERFACE",
+        "name": "Node",
+        "possibleTypes": [
+          {
+            "name": "Client"
+          },
+          {
+            "name": "Flight"
+          },
+          {
+            "name": "Payload"
+          },
+          {
+            "name": "User"
+          },
+          {
+            "name": "BoxApplication"
+          },
+          {
+            "name": "folder"
+          },
+          {
+            "name": "shuttleSource"
+          },
+          {
+            "name": "sourceFolder"
+          },
+          {
+            "name": "sourceFile"
+          },
+          {
+            "name": "BoxUser"
+          },
+          {
+            "name": "boxFile"
+          },
+          {
+            "name": "pathCollection"
+          },
+          {
+            "name": "sharedLink"
+          },
+          {
+            "name": "lock"
+          },
+          {
+            "name": "BoxWorkerPool"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "SourceItem",
+        "possibleTypes": [
+          {
+            "name": "sourceFolder"
+          },
+          {
+            "name": "sourceFile"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+First, we will use AWS CLI to sign up a user with their email and password.
+
+aws cognito-idp sign-up \
+  --region us-east-2 \
+  --client-id 2k2ibre9oadtvrr8uaqvl11ch9 \
+  --username dtrodger20@gmail.com \
+  --password Welcome2017$
+
+Now, the user is created in Cognito User Pool. However, before the user can authenticate with the User Pool,
+the account needs to be verified. Let’s quickly verify the user using an administrator command.
+
+aws cognito-idp admin-confirm-sign-up \
+  --region us-east-2 \
+  --user-pool-id us-east-2_3EMPlCVY4 \
+  --username dtrodger20@gmail.com
+
+
+sls invoke local --function note-create --path data/mock/note/create.json
+sls invoke local --function note-get --path data/mock/note/get.json
+sls invoke local --function note-list --path data/mock/note/list.json
+sls invoke local --function note-list --path data/mock/note/update.json
+sls invoke local --function billing-create --path data/mock/billing/create.json
+sls deploy
+sls deploy function -f note-create
+
+npx aws-api-gateway-cli-test \
+--username='dtrodger20@gmail.com' \
+--password='Welcome2017$' \
+--user-pool-id='us-east-2_3EMPlCVY4' \
+--app-client-id='2k2ibre9oadtvrr8uaqvl11ch9' \
+--cognito-region='us-east-2' \
+--identity-pool-id='us-east-2:776036c6-d082-4251-8b04-e81addca4e3a' \
+--invoke-url='https://3ebuxyu5si.execute-api.us-east-2.amazonaws.com/prod' \
+--api-gateway-region='us-east-2' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'

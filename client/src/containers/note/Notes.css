@@ -1,0 +1,13 @@
+.Notes .notes h4 {
+  overflow: hidden;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Notes .notes p {
+  color: #666;
+}
+.Notes h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}

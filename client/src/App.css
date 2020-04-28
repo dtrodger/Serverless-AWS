@@ -1,0 +1,8 @@
+.App {
+  margin-top: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.App .navbar-brand {
+  font-weight: bold;
+}

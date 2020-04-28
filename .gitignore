@@ -1,0 +1,52 @@
+logs
+*.log
+npm-debug.log*
+env
+pids
+*.pid
+*.seed
+api/build/Release
+api/node_modules
+api/.webpack
+api/.serverless
+api/env.yml
+api/.env
+.idea
+docs/cognito-app.txt
+docs/cognito-user.txt
+docs/cognito-pool.txt
+docs/cognito-identity-pool.txt
+docs/dynamodb.txt
+docs/gaia.csv
+docs/rds.txt
+api/.git
+client/.git
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+client/node_modules
+client/.pnp
+client/.pnp.js
+
+# testing
+client/coverage
+
+# production
+client/build
+
+# misc
+.DS_Store
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/package-lock.json
+client/src/config/js
+api/package-lock.json
+api/.DS_Store
+scripts/src/config.js
+scripts/package-lock.json
